@@ -5,7 +5,6 @@ target 'Prueba-GoogleSignIn' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   pod 'Firebase/Auth'
 pod 'GoogleSignIn'
-pod 'ZXingObjC', '~> 3.2.2'
 
   # Pods for Prueba-GoogleSignIn
 

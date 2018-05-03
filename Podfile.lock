@@ -45,14 +45,10 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - ZXingObjC (3.2.2):
-    - ZXingObjC/All (= 3.2.2)
-  - ZXingObjC/All (3.2.2)
 
 DEPENDENCIES:
   - Firebase/Auth
   - GoogleSignIn
-  - ZXingObjC (~> 3.2.2)
 
 SPEC CHECKSUMS:
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
@@ -65,8 +61,7 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  ZXingObjC: 2c95a0dc52daac69b23ec78fad8fa2fec05f8981
 
-PODFILE CHECKSUM: e35e43567bd07977f35439adbc4690065160d0fc
+PODFILE CHECKSUM: 82c0794e7bb96d6956872adeefc70617b1432b57
 
 COCOAPODS: 1.4.0

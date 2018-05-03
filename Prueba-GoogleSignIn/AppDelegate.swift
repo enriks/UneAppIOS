@@ -64,26 +64,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         
         print("Entraste: ",user)
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (user, error) in
-            if let error = error {
-                print("no entro en firebase")
-                return
+        let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let homePage = mainStoryBoard.instantiateViewController(withIdentifier: "TabController") as! UITabBarController
+        
+       
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                           accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (user, error) in
+                if let error = error {
+                    print("no entro en firebase")
+                    return
+                }
+                
+                guard let uid = user?.uid else{
+                    return
+                }
+                print("Se loggeoxd en firebase",uid)
+                
+                //crear un UIStoryboard para acceder a las views
+                
+                
+                
+                self.window?.rootViewController = homePage
+                self.window?.makeKeyAndVisible()
             }
-            guard let uid = user?.uid else{
-                return
-            }
-            print("Se loggeoxd en firebase",uid)
-            
-            //crear un UIStoryboard para acceder a las views
-            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let homePage = mainStoryBoard.instantiateViewController(withIdentifier: "TabController") as! UITabBarController
-            self.window?.rootViewController = homePage
-            self.window?.makeKeyAndVisible()
-        }
+        
+        
         
     }
     
