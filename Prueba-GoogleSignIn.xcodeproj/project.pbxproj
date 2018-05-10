@@ -12,6 +12,7 @@
 		46243DE420864559006406AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46243DE220864559006406AE /* LaunchScreen.storyboard */; };
 		46243DEF20864559006406AE /* Prueba_GoogleSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46243DEE20864559006406AE /* Prueba_GoogleSignInTests.swift */; };
 		46243E0F20865722006406AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46243E0E20865722006406AE /* GoogleService-Info.plist */; };
+		463D41FF20A1FFF300F9701F /* ViewTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D41FE20A1FFF300F9701F /* ViewTabBarController.swift */; };
 		46411883208780B300030306 /* Noticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46411882208780B200030306 /* Noticias.swift */; };
 		46411885208780D400030306 /* TableNoticiasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46411884208780D400030306 /* TableNoticiasController.swift */; };
 		464118872087819700030306 /* CardsNoticiasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464118862087819700030306 /* CardsNoticiasCell.swift */; };
@@ -20,11 +21,10 @@
 		4641188D208789B500030306 /* TableHorarioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641188C208789B500030306 /* TableHorarioCell.swift */; };
 		464ED0C4209A10CE001F7D9A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ED0C3209A10CE001F7D9A /* Tools.swift */; };
 		464ED0CC209A329D001F7D9A /* ViewHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46243DDB20864559006406AE /* ViewHomeController.swift */; };
-		464ED0CE209A34F3001F7D9A /* ViewQrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ED0CD209A34F2001F7D9A /* ViewQrController.swift */; };
 		464ED0D3209A3606001F7D9A /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ED0D2209A3606001F7D9A /* QrViewController.swift */; };
 		464ED0D4209A3843001F7D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46243DDD20864559006406AE /* Main.storyboard */; };
-		B5C3EC9F2510874B11CAC89E /* libPods-Prueba-GoogleSignIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB8AE02BA8C2994F6FE35D3 /* libPods-Prueba-GoogleSignIn.a */; };
-		CD040FA87448D96DEFBB57E0 /* libPods-Prueba-GoogleSignInTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAC9A0C4EE9108D70FC83A6 /* libPods-Prueba-GoogleSignInTests.a */; };
+		7727B8E557B1484513099629 /* Pods_Prueba_GoogleSignInTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132BC101E2B04726EC789A7F /* Pods_Prueba_GoogleSignInTests.framework */; };
+		80F65665C5BC62A0AF6717D1 /* Pods_Prueba_GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD16C27AA821852DBA148A54 /* Pods_Prueba_GoogleSignIn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DAC9A0C4EE9108D70FC83A6 /* libPods-Prueba-GoogleSignInTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prueba-GoogleSignInTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		132BC101E2B04726EC789A7F /* Pods_Prueba_GoogleSignInTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba_GoogleSignInTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46243DD620864559006406AE /* Prueba-GoogleSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba-GoogleSignIn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46243DD920864559006406AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46243DDB20864559006406AE /* ViewHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHomeController.swift; sourceTree = "<group>"; };
@@ -50,6 +50,7 @@
 		46243DEE20864559006406AE /* Prueba_GoogleSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_GoogleSignInTests.swift; sourceTree = "<group>"; };
 		46243DF020864559006406AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46243E0E20865722006406AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463D41FE20A1FFF300F9701F /* ViewTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTabBarController.swift; sourceTree = "<group>"; };
 		46411882208780B200030306 /* Noticias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Noticias.swift; sourceTree = "<group>"; };
 		46411884208780D400030306 /* TableNoticiasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableNoticiasController.swift; sourceTree = "<group>"; };
 		464118862087819700030306 /* CardsNoticiasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsNoticiasCell.swift; sourceTree = "<group>"; };
@@ -57,12 +58,11 @@
 		4641188A2087899E00030306 /* TableHorarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHorarioController.swift; sourceTree = "<group>"; };
 		4641188C208789B500030306 /* TableHorarioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHorarioCell.swift; sourceTree = "<group>"; };
 		464ED0C3209A10CE001F7D9A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		464ED0CD209A34F2001F7D9A /* ViewQrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewQrController.swift; sourceTree = "<group>"; };
 		464ED0D2209A3606001F7D9A /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 		7EE86C34B6D0D6F9B25AAF3F /* Pods-Prueba-GoogleSignInTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignInTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignInTests/Pods-Prueba-GoogleSignInTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DE683C637A42FD721AD057B /* Pods-Prueba-GoogleSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignIn/Pods-Prueba-GoogleSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		C6527E7A6808EF62742581F8 /* Pods-Prueba-GoogleSignInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignInTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignInTests/Pods-Prueba-GoogleSignInTests.release.xcconfig"; sourceTree = "<group>"; };
-		EEB8AE02BA8C2994F6FE35D3 /* libPods-Prueba-GoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prueba-GoogleSignIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD16C27AA821852DBA148A54 /* Pods_Prueba_GoogleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba_GoogleSignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBBC27B36DC90734AB9643B /* Pods-Prueba-GoogleSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignIn/Pods-Prueba-GoogleSignIn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C3EC9F2510874B11CAC89E /* libPods-Prueba-GoogleSignIn.a in Frameworks */,
+				80F65665C5BC62A0AF6717D1 /* Pods_Prueba_GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD040FA87448D96DEFBB57E0 /* libPods-Prueba-GoogleSignInTests.a in Frameworks */,
+				7727B8E557B1484513099629 /* Pods_Prueba_GoogleSignInTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 		3F7A35BF53FBA58C72F0FCA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEB8AE02BA8C2994F6FE35D3 /* libPods-Prueba-GoogleSignIn.a */,
-				2DAC9A0C4EE9108D70FC83A6 /* libPods-Prueba-GoogleSignInTests.a */,
+				FD16C27AA821852DBA148A54 /* Pods_Prueba_GoogleSignIn.framework */,
+				132BC101E2B04726EC789A7F /* Pods_Prueba_GoogleSignInTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,7 +131,6 @@
 			children = (
 				46243DD920864559006406AE /* AppDelegate.swift */,
 				46411884208780D400030306 /* TableNoticiasController.swift */,
-				464ED0CD209A34F2001F7D9A /* ViewQrController.swift */,
 				4641188A2087899E00030306 /* TableHorarioController.swift */,
 				4641188C208789B500030306 /* TableHorarioCell.swift */,
 				464ED0C3209A10CE001F7D9A /* Tools.swift */,
@@ -139,6 +138,7 @@
 				46243DDB20864559006406AE /* ViewHomeController.swift */,
 				46243DDD20864559006406AE /* Main.storyboard */,
 				464ED0D2209A3606001F7D9A /* QrViewController.swift */,
+				463D41FE20A1FFF300F9701F /* ViewTabBarController.swift */,
 				46411882208780B200030306 /* Noticias.swift */,
 				464118882087867C00030306 /* Horario.swift */,
 				46243DE020864559006406AE /* Assets.xcassets */,
@@ -288,9 +288,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Prueba-GoogleSignIn/Pods-Prueba-GoogleSignIn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,12 +315,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Prueba-GoogleSignIn/Pods-Prueba-GoogleSignIn-resources.sh",
-				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,8 +385,8 @@
 				464118892087867C00030306 /* Horario.swift in Sources */,
 				4641188D208789B500030306 /* TableHorarioCell.swift in Sources */,
 				464ED0CC209A329D001F7D9A /* ViewHomeController.swift in Sources */,
+				463D41FF20A1FFF300F9701F /* ViewTabBarController.swift in Sources */,
 				46411885208780D400030306 /* TableNoticiasController.swift in Sources */,
-				464ED0CE209A34F3001F7D9A /* ViewQrController.swift in Sources */,
 				464ED0D3209A3606001F7D9A /* QrViewController.swift in Sources */,
 				46411883208780B300030306 /* Noticias.swift in Sources */,
 				464118872087819700030306 /* CardsNoticiasCell.swift in Sources */,

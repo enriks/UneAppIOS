@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
-
+    struct Usuario{
+        static var usuario = ""
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Use Firebase library to configure APIs
@@ -77,11 +79,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     return
                 }
                 
-                guard let uid = user?.uid else{
+                guard let uid = user?.email else{
                     return
                 }
                 print("Se loggeoxd en firebase",uid)
-                
+                let emailArr = uid.characters.split{$0 == "@"}.map(String.init)
+                print("Usuario",emailArr[0])
+                Usuario.usuario=emailArr[0]
                 //crear un UIStoryboard para acceder a las views
                 
                 

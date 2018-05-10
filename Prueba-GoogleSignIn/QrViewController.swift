@@ -35,7 +35,7 @@ class QrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate 
     }
 
     @IBAction func puesElBoton(_ sender: UIButton) {
-        cargar()
+        //cargar()
     }
     func cargar() {
         //crear la sesion para capturar el video
@@ -72,6 +72,29 @@ class QrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate 
         // Dispose of any resources that can be recreated.
     }
     
+    func httpRequest(){
+        var parametrosArr = qr.characters.split{$0 == "_"}.map(String.init)
+        let json: [String:Any] = ["idPersona":AppDelegate.Usuario.usuario,"idEvento": parametrosArr[0],"fecha": parametrosArr[1],"valido": true,"validado": 1,"tipoRegistro":"Alumno","esPar":true]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        let url = URL(string: "htpps://uneasistencias.uneatlantico.es/registrar")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request){
+            data, response, error in
+            guard let data = data, error == nil else{
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any]{
+                print(responseJSON)
+            }
+        }
+        task.resume()
+    }
 
     /*
     // MARK: - Navigation

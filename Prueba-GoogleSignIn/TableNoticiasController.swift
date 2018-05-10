@@ -13,6 +13,18 @@ class TableViewController: UITableViewController {
     //MARK: Propiedades
     var noticias = [Noticias]()
     
+    @IBAction func esto(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let transicion = sender.translation(in: self.view).y
+            if transicion > 0 {
+                Tools().mostarQR(ventana: self)
+                print("swipe arriba∫")
+            }
+            else{
+                print("swipe arribas∫")
+            }
+        }
+    }
     
     //Mark: Metodos Privados
     private func cargarNoticiasejemplo(){

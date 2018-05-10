@@ -1,44 +1,31 @@
 //
-//  ViewQrController.swift
+//  ViewTabBarController.swift
 //  Prueba-GoogleSignIn
 //
-//  Created by Manuel Coto on 2/5/18.
+//  Created by Manuel Coto on 8/5/18.
 //  Copyright © 2018 Manuel Coto. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class ViewQrController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
-    
-    var video = AVCaptureVideoPreviewLayer()
-    @IBOutlet weak var qrPreview: UIImageView!
-    var qr = ""
+class ViewTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print("enserio hace esto")
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func panAction(_ sender: UIPanGestureRecognizer) {
         
         
     }
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if metadataObjects != nil && metadataObjects.count != 0{
-            if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
-            {
-                if object.type == AVMetadataObject.ObjectType.qr{
-                    qr = object.stringValue!
-                }
-            }
-        }
-    }
-
     /*
     // MARK: - Navigation
 
