@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.7.0)
   - Firebase/Auth (4.11.0):
     - Firebase/Core
     - FirebaseAuth (= 4.5.0)
@@ -19,6 +18,9 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
   - GoogleSignIn (4.1.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -48,23 +50,23 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
   - Firebase/Auth
+  - FMDB
   - GoogleSignIn
 
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: 147bf340a0706b44ca1753d6b41ebafd9687cfe6
   FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: af2a963138521e5edfd83a179c4d31d6b30c0896
+PODFILE CHECKSUM: daf53f4b7f16e2a907dae3d9fdc09ab19de3cdd1
 
 COCOAPODS: 1.4.0

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import SystemConfiguration.CaptiveNetwork
-import Alamofire
 
 class Tools{
     func getWiFiName() -> String? {

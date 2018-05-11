@@ -16,7 +16,7 @@ class ViewHomeController: UIViewController , GIDSignInUIDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        DatabaseController().prueba()
         let signInButton = GIDSignInButton()
         signInButton.frame = CGRect(x: 16, y: 116 + 66, width: view.frame.width - 32, height: 50)
         view.addSubview(signInButton)
