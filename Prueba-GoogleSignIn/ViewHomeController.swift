@@ -13,14 +13,22 @@ import SystemConfiguration.CaptiveNetwork
 
 class ViewHomeController: UIViewController , GIDSignInUIDelegate{
 
+    @IBOutlet weak var imagenUneat: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        DatabaseController().prueba()
-        let signInButton = GIDSignInButton()
-        signInButton.frame = CGRect(x: 16, y: 116 + 66, width: view.frame.width - 32, height: 50)
-        view.addSubview(signInButton)
+        //DatabaseController().prueba()
+        let signInButton = GIDSignIn()
+        //signInButton.frame = CGRect(x: 16, y: 116 + 66, width: view.frame.width - 32, height: 50)
+        //view.addSubview(signInButton)
+        UIView.animate(withDuration: 1, animations: {
+            self.imagenUneat.isHidden = false
+        })
+        
         GIDSignIn.sharedInstance().uiDelegate = self
+        //signInButton.clientID = AppDelegate.Usuario.clientId
+        //signInButton.signIn()
+        GIDSignIn.sharedInstance().signIn()
     }
 
     override func didReceiveMemoryWarning() {
