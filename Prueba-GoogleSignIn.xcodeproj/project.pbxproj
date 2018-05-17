@@ -577,6 +577,9 @@
 				SDKROOT = iphoneos10.3;
 =======
 				SDKROOT = iphoneos;
+<<<<<<< HEAD
+>>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
+=======
 >>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;

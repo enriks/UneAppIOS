@@ -317,6 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="oHJ-oH-YEF">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -327,6 +328,11 @@
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+=======
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+>>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
 =======
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">

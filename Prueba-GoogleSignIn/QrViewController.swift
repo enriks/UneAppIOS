@@ -84,7 +84,11 @@ class QrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate 
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             let url = URL(string: "https://uneasistencias.uneatlantico.es/registrar")!
+=======
+            let url = URL(string: "htpps://uneasistencias.uneatlantico.es/registrar")!
+>>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
 =======
             let url = URL(string: "htpps://uneasistencias.uneatlantico.es/registrar")!
 >>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
