@@ -20,22 +20,27 @@ class QrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       // cargar()
+        cargar()
         
     }
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if metadataObjects != nil && metadataObjects.count != 0{
+        if metadataObjects.count != 0{
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
             {
                 if object.type == AVMetadataObject.ObjectType.qr{
                     qr = object.stringValue!
+                    print(object.stringValue!)
+                    if Tools().getWiFiName() == true{
+                        httpRequest()
+                    }
                 }
             }
         }
     }
+    
 
     @IBAction func puesElBoton(_ sender: UIButton) {
-        //cargar()
+        cargar()
     }
     func cargar() {
         //crear la sesion para capturar el video
@@ -73,27 +78,47 @@ class QrViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate 
     }
     
     func httpRequest(){
-        var parametrosArr = qr.characters.split{$0 == "_"}.map(String.init)
-        let json: [String:Any] = ["idPersona":AppDelegate.Usuario.usuario,"idEvento": parametrosArr[0],"fecha": parametrosArr[1],"valido": true,"validado": 1,"tipoRegistro":"Alumno","esPar":true]
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
-        let url = URL(string: "htpps://uneasistencias.uneatlantico.es/registrar")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = jsonData
-        
-        let task = URLSession.shared.dataTask(with: request){
-            data, response, error in
-            guard let data = data, error == nil else{
-                print(error?.localizedDescription ?? "No data")
-                return
+        if Tools().getWiFiName()!{
+            var parametrosArr = qr.characters.split{$0 == "_"}.map(String.init)
+            let json: [String:Any] = ["idPersona":AppDelegate.Usuario.usuario,"idEvento": parametrosArr[0],"fecha": parametrosArr[1],"valido": true,"validado": 1,"tipoRegistro":"Alumno","esPar":true]
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+            
+<<<<<<< HEAD
+            let url = URL(string: "https://uneasistencias.uneatlantico.es/registrar")!
+=======
+            let url = URL(string: "htpps://uneasistencias.uneatlantico.es/registrar")!
+>>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            request.timeoutInterval = 15000
+            
+            let task = URLSession.shared.dataTask(with: request){
+                data, response, error in
+                guard let data = data, error == nil else{
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any]{
+                    print(responseJSON)
+                }
+                if responseJSON != nil {
+                    DatabaseController().ingresoRegistro(idEvento: Int(parametrosArr[0])!, fecha: parametrosArr[1], enviado: 1, estado: 1)
+                    if AppDelegate.Usuario.estado == true{
+                        //responseJSON.horasAlumnos[0].horas
+                        //response.JSON.horasTotales[0].horas
+                    }
+                }
+                
             }
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any]{
-                print(responseJSON)
-            }
+            task.resume()
         }
-        task.resume()
+        else{
+            //hacer una ventana para mostrar esto
+            print("conectate a una red universitaria para enviar qr")
+        }
+        
     }
 
     /*

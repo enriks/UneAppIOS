@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzk-c1-aXH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="04y-BG-eoF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,22 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inicia Sesion-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="HomePage" id="BYZ-38-t0r" customClass="ViewHomeController" customModule="Prueba_GoogleSignIn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Inicia Sesion" id="NP1-A0-uuN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="637.60000000000002" y="-34.632683658170919"/>
-        </scene>
         <!--QR-->
         <scene sceneID="7ft-oG-ItX">
             <objects>
@@ -75,9 +59,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Oa3-7w-Y8C">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Horario" id="qMv-JK-2wr"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableHorarioCell" rowHeight="150" id="lX4-Ab-Sdm" customClass="TableHorarioCell" customModule="Prueba_GoogleSignIn">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lX4-Ab-Sdm" id="c56-Oj-0qq">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
@@ -132,6 +123,35 @@
             </objects>
             <point key="canvasLocation" x="2320.8000000000002" y="-27.436281859070466"/>
         </scene>
+        <!--View Home Controller-->
+        <scene sceneID="MSk-9A-wKS">
+            <objects>
+                <viewController id="04y-BG-eoF" customClass="ViewHomeController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzv-7i-vsA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4mWsrz1" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-0d-GeI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="leading" secondItem="fzv-7i-vsA" secondAttribute="leading" id="J8z-Cu-X24"/>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="bottom" secondItem="SDZ-Mf-4fE" secondAttribute="bottom" id="W4R-YH-NZR"/>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="top" secondItem="fzv-7i-vsA" secondAttribute="top" id="anm-b3-9sL"/>
+                            <constraint firstAttribute="trailing" secondItem="cH5-0d-GeI" secondAttribute="trailing" id="fRe-VC-63T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SDZ-Mf-4fE"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagenUneat" destination="cH5-0d-GeI" id="rpi-n0-taN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQZ-iD-A5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703.20000000000005" y="-35.532233883058474"/>
+        </scene>
         <!--View Tab Bar Controller-->
         <scene sceneID="uRq-Dc-nDd">
             <objects>
@@ -145,30 +165,12 @@
                         <segue destination="wbl-PQ-Vhc" kind="relationship" relationship="viewControllers" id="qzL-Ee-Dbu"/>
                         <segue destination="lS2-x5-YO3" kind="relationship" relationship="viewControllers" id="ZZq-JI-6aa"/>
                         <segue destination="FUv-Fh-WzT" kind="relationship" relationship="viewControllers" id="yWp-sq-fxU"/>
+                        <segue destination="JzT-t9-aTb" kind="relationship" relationship="viewControllers" id="wQ7-2W-yLy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXo-oo-BUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1407" y="-35"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hU3-5R-sYX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gzk-c1-aXH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Abp-Ig-KgE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gVz-v3-WZx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bwy-ad-bXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="B4y-fh-fbY"/>
-            </objects>
-            <point key="canvasLocation" x="-106" y="-35"/>
         </scene>
         <!--Noticias-->
         <scene sceneID="Mf5-i3-Z4T">
@@ -242,21 +244,133 @@
             </objects>
             <point key="canvasLocation" x="2321" y="685"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="myK-N0-XLA">
+        <!--Table Registros View Controller-->
+        <scene sceneID="2Jk-Vv-1H9">
             <objects>
-                <viewController id="9ao-iq-8Wt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WLS-ET-c7W">
+                <tableViewController id="ma5-ql-0c7" customClass="TableRegistrosViewController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="tvU-CR-DMd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faK-KS-1A7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="vp1-0v-1zK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="7es-KR-oJM">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eIs-1Y-S0N">
+                                        <connections>
+                                            <action selector="estohehe:" destination="ma5-ql-0c7" id="JSF-cb-VnE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegistrosCell" rowHeight="75" id="mqG-WS-4Qk" customClass="TableRegistroViewCell" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqG-WS-4Qk" id="ikD-6w-Ytf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F82-0h-GkX">
+                                            <rect key="frame" x="16" y="11" width="83" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AZ-6z-6Uq">
+                                            <rect key="frame" x="166" y="43" width="104" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fechaClase" destination="7AZ-6z-6Uq" id="v50-DP-CFe"/>
+                                    <outlet property="nombreClase" destination="F82-0h-GkX" id="5je-4e-yLn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ma5-ql-0c7" id="8ez-pm-IVi"/>
+                            <outlet property="delegate" destination="ma5-ql-0c7" id="FAe-zX-VdE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tituloCard" destination="7es-KR-oJM" id="ASo-Gx-Jjg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXC-TV-6Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2320.5" y="1434.5"/>
+        </scene>
+        <!--Mis Clases-->
+        <scene sceneID="COA-TG-5s5">
+            <objects>
+                <tableViewController id="JzT-t9-aTb" customClass="TableClasesController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="glO-iH-xp3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<<<<<<< HEAD
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="oHJ-oH-YEF">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Mis Clases" id="cbq-Dm-Kz2"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+=======
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+>>>>>>> 1cf260ffdcf8bf3e86f1ba604ecf0030dfc54d7e
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yuW-ov-WWf" id="muY-eT-Yg4">
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-2z-lZ6">
+                                            <rect key="frame" x="16" y="11" width="115" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SOk-ki-Rt8">
+                                            <rect key="frame" x="77" y="53" width="220" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nombreClaselbl" destination="bJ7-2z-lZ6" id="vfp-Ie-QqG"/>
+                                    <outlet property="progresoAlumno" destination="SOk-ki-Rt8" id="yZr-7K-5bC"/>
+                                    <segue destination="ma5-ql-0c7" kind="show" identifier="VerRegistrosClase" id="YH9-QX-wAg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JzT-t9-aTb" id="Vee-zm-dFG"/>
+                            <outlet property="delegate" destination="JzT-t9-aTb" id="RSV-Ud-eYl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Mis Clases" id="dUc-fJ-7tx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrk-xZ-W6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="750.67466266866575"/>
         </scene>
     </scenes>
     <resources>
+        <image name="4mWsrz1" width="636" height="381"/>
         <image name="67057-1" width="1920" height="1080"/>
         <image name="c26" width="478" height="540"/>
         <image name="v-35-512" width="170" height="170"/>

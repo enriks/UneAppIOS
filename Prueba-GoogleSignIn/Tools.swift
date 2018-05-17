@@ -11,12 +11,14 @@ import UIKit
 import SystemConfiguration.CaptiveNetwork
 
 class Tools{
-    func getWiFiName() -> String? {
-        var ssid: String?
+    func getWiFiName() -> Bool? {
+        var ssid: Bool? = false
         if let interfaces = CNCopySupportedInterfaces() as NSArray? {
             for interface in interfaces {
                 if let interfaceInfo = CNCopyCurrentNetworkInfo(interface as! CFString) as NSDictionary? {
-                    ssid = interfaceInfo[kCNNetworkInfoKeySSID as String] as? String
+                    if interfaceInfo[kCNNetworkInfoKeySSID as String] as? String == "wifiuneat-publica" || interfaceInfo[kCNNetworkInfoKeySSID as String] as? String == "wifiuneat-alum" || interfaceInfo[kCNNetworkInfoKeySSID as String] as? String == "wuneat-becarios"{
+                        ssid = true
+                    }
                     break
                 }
             }
