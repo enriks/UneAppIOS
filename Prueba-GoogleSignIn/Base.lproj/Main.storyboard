@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="04y-BG-eoF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--QR-->
+        <scene sceneID="7ft-oG-ItX">
+            <objects>
+                <viewController id="FUv-Fh-WzT" customClass="QrViewController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhK-7U-EgL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="c26" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-Y0-LjK">
+                                <rect key="frame" x="16" y="20" width="343" height="540"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFe-YS-iHW">
+                                <rect key="frame" x="16" y="587" width="57" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="puesElBoton:" destination="FUv-Fh-WzT" eventType="touchUpInside" id="A2m-Ty-zdr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D9r-Y0-LjK" firstAttribute="trailing" secondItem="MhK-7U-EgL" secondAttribute="trailingMargin" id="5If-IR-Jdt"/>
+                            <constraint firstItem="YFe-YS-iHW" firstAttribute="leading" secondItem="MhK-7U-EgL" secondAttribute="leadingMargin" id="9Uh-f1-8ft"/>
+                            <constraint firstItem="YFe-YS-iHW" firstAttribute="bottom" secondItem="v8q-IU-er5" secondAttribute="bottom" id="OGO-YW-MUu"/>
+                            <constraint firstItem="D9r-Y0-LjK" firstAttribute="top" secondItem="v8q-IU-er5" secondAttribute="top" id="fKc-qQ-4Au"/>
+                            <constraint firstItem="YFe-YS-iHW" firstAttribute="leading" secondItem="D9r-Y0-LjK" secondAttribute="leading" id="noJ-16-RUD"/>
+                            <constraint firstItem="YFe-YS-iHW" firstAttribute="top" secondItem="D9r-Y0-LjK" secondAttribute="bottom" constant="27" id="peM-Uf-f78"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v8q-IU-er5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="QR" id="GQt-FO-VEM"/>
+                    <connections>
+                        <outlet property="qrPreview" destination="D9r-Y0-LjK" id="svH-Ag-mKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMg-xk-aar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="-976"/>
+        </scene>
+        <!--Horario-->
+        <scene sceneID="jai-kB-pqg">
+            <objects>
+                <tableViewController id="lS2-x5-YO3" customClass="TableHorarioController" customModule="Prueba_GoogleSignIn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NCT-lu-PcT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableHorarioCell" rowHeight="150" id="lX4-Ab-Sdm" customClass="TableHorarioCell" customModule="Prueba_GoogleSignIn">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lX4-Ab-Sdm" id="c56-Oj-0qq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCP-TH-GdG">
+                                            <rect key="frame" x="16" y="11" width="187" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-Ny-giz">
+                                            <rect key="frame" x="211" y="11" width="148" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-kZ-Pck">
+                                            <rect key="frame" x="16" y="51" width="187" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieX-CR-CZT">
+                                            <rect key="frame" x="211" y="51" width="148" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Aula" destination="vCP-TH-GdG" id="QOe-7a-PWw"/>
+                                    <outlet property="HoraComienzo" destination="2Ux-kZ-Pck" id="ed2-Zn-kc5"/>
+                                    <outlet property="HoraFin" destination="ieX-CR-CZT" id="epz-Pz-vEV"/>
+                                    <outlet property="Profesor" destination="ezp-Ny-giz" id="IUR-f7-IV2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lS2-x5-YO3" id="dR3-ic-krZ"/>
+                            <outlet property="delegate" destination="lS2-x5-YO3" id="iTL-iu-xgT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Horario" id="Krq-cK-R5l"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6U-xy-Ncy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320.8000000000002" y="-27.436281859070466"/>
+        </scene>
+        <!--View Home Controller-->
+        <scene sceneID="MSk-9A-wKS">
+            <objects>
+                <viewController id="04y-BG-eoF" customClass="ViewHomeController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzv-7i-vsA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4mWsrz1" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-0d-GeI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="leading" secondItem="fzv-7i-vsA" secondAttribute="leading" id="J8z-Cu-X24"/>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="bottom" secondItem="SDZ-Mf-4fE" secondAttribute="bottom" id="W4R-YH-NZR"/>
+                            <constraint firstItem="cH5-0d-GeI" firstAttribute="top" secondItem="fzv-7i-vsA" secondAttribute="top" id="anm-b3-9sL"/>
+                            <constraint firstAttribute="trailing" secondItem="cH5-0d-GeI" secondAttribute="trailing" id="fRe-VC-63T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SDZ-Mf-4fE"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagenUneat" destination="cH5-0d-GeI" id="rpi-n0-taN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQZ-iD-A5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703.20000000000005" y="-35.532233883058474"/>
+        </scene>
+        <!--View Tab Bar Controller-->
+        <scene sceneID="uRq-Dc-nDd">
+            <objects>
+                <tabBarController storyboardIdentifier="TabController" id="pTl-Ty-WLx" customClass="ViewTabBarController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Ku-jd-6bm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wbl-PQ-Vhc" kind="relationship" relationship="viewControllers" id="qzL-Ee-Dbu"/>
+                        <segue destination="lS2-x5-YO3" kind="relationship" relationship="viewControllers" id="ZZq-JI-6aa"/>
+                        <segue destination="FUv-Fh-WzT" kind="relationship" relationship="viewControllers" id="yWp-sq-fxU"/>
+                        <segue destination="JzT-t9-aTb" kind="relationship" relationship="viewControllers" id="wQ7-2W-yLy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXo-oo-BUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="-35"/>
+        </scene>
+        <!--Noticias-->
+        <scene sceneID="Mf5-i3-Z4T">
+            <objects>
+                <tableViewController title="Noticias" id="wbl-PQ-Vhc" customClass="TableViewController" customModule="Prueba_GoogleSignIn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="242" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uy2-Wb-haf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="AFU-XE-kvZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Noticias" id="RXx-Mq-cKT"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardsTableView" rowHeight="242" id="yEr-LJ-Uhr" customClass="CardsTableViewCell" customModule="Prueba_GoogleSignIn">
+                                <rect key="frame" x="0.0" y="72" width="375" height="242"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yEr-LJ-Uhr" id="mI6-l1-8Hm" customClass="CardsTableViewCell" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="241.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="67057-1" translatesAutoresizingMaskIntoConstraints="NO" id="78y-8b-flg">
+                                            <rect key="frame" x="8" y="26" width="214" height="209"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk6-Hz-uHA">
+                                            <rect key="frame" x="16" y="0.0" width="351" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKt-qo-lbY">
+                                            <rect key="frame" x="230" y="23" width="137" height="212"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtq-ER-VNe">
+                                            <rect key="frame" x="311" y="-4" width="48" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="v-35-512"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="NombreCard" destination="Yk6-Hz-uHA" id="4Tn-Bz-rvX"/>
+                                    <outlet property="fotoImageView" destination="78y-8b-flg" id="U8g-ra-gjl"/>
+                                    <outlet property="noticiasTextView" destination="sKt-qo-lbY" id="NLg-ry-kUs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wbl-PQ-Vhc" id="o67-df-StW"/>
+                            <outlet property="delegate" destination="wbl-PQ-Vhc" id="Gbv-AP-DGj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Noticias" id="E3B-CS-BLo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bp-8p-O2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aSk-dQ-u9g">
+                    <connections>
+                        <action selector="esto:" destination="wbl-PQ-Vhc" id="doZ-Hu-yIB"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2321" y="685"/>
+        </scene>
+        <!--Table Registros View Controller-->
+        <scene sceneID="2Jk-Vv-1H9">
+            <objects>
+                <tableViewController id="ma5-ql-0c7" customClass="TableRegistrosViewController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="tvU-CR-DMd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="vp1-0v-1zK">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="7es-KR-oJM">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eIs-1Y-S0N">
+                                        <connections>
+                                            <action selector="estohehe:" destination="ma5-ql-0c7" id="JSF-cb-VnE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegistrosCell" rowHeight="75" id="mqG-WS-4Qk" customClass="TableRegistroViewCell" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqG-WS-4Qk" id="ikD-6w-Ytf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F82-0h-GkX">
+                                            <rect key="frame" x="16" y="11" width="83" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AZ-6z-6Uq">
+                                            <rect key="frame" x="166" y="43" width="104" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fechaClase" destination="7AZ-6z-6Uq" id="v50-DP-CFe"/>
+                                    <outlet property="nombreClase" destination="F82-0h-GkX" id="5je-4e-yLn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ma5-ql-0c7" id="8ez-pm-IVi"/>
+                            <outlet property="delegate" destination="ma5-ql-0c7" id="FAe-zX-VdE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tituloCard" destination="7es-KR-oJM" id="ASo-Gx-Jjg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXC-TV-6Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320.5" y="1434.5"/>
+        </scene>
+        <!--Mis Clases-->
+        <scene sceneID="COA-TG-5s5">
+            <objects>
+                <tableViewController id="JzT-t9-aTb" customClass="TableClasesController" customModule="Prueba_GoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="glO-iH-xp3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClasesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ClasesCell" rowHeight="80" id="yuW-ov-WWf" customClass="TableViewClasesCellController" customModule="Prueba_GoogleSignIn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yuW-ov-WWf" id="muY-eT-Yg4">
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-2z-lZ6">
+                                            <rect key="frame" x="16" y="11" width="115" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SOk-ki-Rt8">
+                                            <rect key="frame" x="77" y="53" width="220" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nombreClaselbl" destination="bJ7-2z-lZ6" id="vfp-Ie-QqG"/>
+                                    <outlet property="progresoAlumno" destination="SOk-ki-Rt8" id="yZr-7K-5bC"/>
+                                    <segue destination="ma5-ql-0c7" kind="show" identifier="VerRegistrosClase" id="YH9-QX-wAg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JzT-t9-aTb" id="Vee-zm-dFG"/>
+                            <outlet property="delegate" destination="JzT-t9-aTb" id="RSV-Ud-eYl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Mis Clases" id="dUc-fJ-7tx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrk-xZ-W6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="750.67466266866575"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4mWsrz1" width="636" height="381"/>
+        <image name="67057-1" width="1920" height="1080"/>
+        <image name="c26" width="478" height="540"/>
+        <image name="v-35-512" width="170" height="170"/>
+    </resources>
+</document>
