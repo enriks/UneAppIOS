@@ -29,6 +29,7 @@
 		464ED0CC209A329D001F7D9A /* ViewHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46243DDB20864559006406AE /* ViewHomeController.swift */; };
 		464ED0D3209A3606001F7D9A /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464ED0D2209A3606001F7D9A /* QrViewController.swift */; };
 		464ED0D4209A3843001F7D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46243DDD20864559006406AE /* Main.storyboard */; };
+		465F7F8E20C97BF000482327 /* UneAppDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 465F7F8D20C97BF000482327 /* UneAppDatabase.db */; };
 		46835EDF20AAFA10005B651C /* TableRegistrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46835EDE20AAFA10005B651C /* TableRegistrosViewController.swift */; };
 		46835EE120AAFA2F005B651C /* TableRegistroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46835EE020AAFA2F005B651C /* TableRegistroViewCell.swift */; };
 		46835EE320AAFA46005B651C /* Registros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46835EE220AAFA46005B651C /* Registros.swift */; };
@@ -59,7 +60,7 @@
 		46243DEE20864559006406AE /* Prueba_GoogleSignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_GoogleSignInTests.swift; sourceTree = "<group>"; };
 		46243DF020864559006406AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46243E0E20865722006406AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		463A0FAE20A4738A009EBFD7 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
+		463A0FAE20A4738A009EBFD7 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataBaseController.swift; path = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/../../../../../../../../../Users/manuelcoto/Documents/GitHub/UneAppIOS/Prueba-GoogleSignIn/DataBaseController.swift"; sourceTree = "<absolute>"; };
 		463A0FB020A474A5009EBFD7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		463A0FB220A47548009EBFD7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		463D41FE20A1FFF300F9701F /* ViewTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTabBarController.swift; sourceTree = "<group>"; };
@@ -74,10 +75,10 @@
 		4641D4BA20A9B554009684A9 /* TableClasesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableClasesController.swift; sourceTree = "<group>"; };
 		464ED0C3209A10CE001F7D9A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		464ED0D2209A3606001F7D9A /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
+		465F7F8D20C97BF000482327 /* UneAppDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = UneAppDatabase.db; path = "/Users/manuelcoto/Documents/GitHub/UneAppIOS/Prueba-GoogleSignIn/UneAppDatabase.db"; sourceTree = "<absolute>"; };
 		46835EDE20AAFA10005B651C /* TableRegistrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRegistrosViewController.swift; sourceTree = "<group>"; };
 		46835EE020AAFA2F005B651C /* TableRegistroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRegistroViewCell.swift; sourceTree = "<group>"; };
 		46835EE220AAFA46005B651C /* Registros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registros.swift; sourceTree = "<group>"; };
-		46CFEF7D20A5827800B6921C /* UneAppDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = UneAppDatabase.db; sourceTree = "<group>"; };
 		7EE86C34B6D0D6F9B25AAF3F /* Pods-Prueba-GoogleSignInTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignInTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignInTests/Pods-Prueba-GoogleSignInTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DE683C637A42FD721AD057B /* Pods-Prueba-GoogleSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignIn/Pods-Prueba-GoogleSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		C6527E7A6808EF62742581F8 /* Pods-Prueba-GoogleSignInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prueba-GoogleSignInTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prueba-GoogleSignInTests/Pods-Prueba-GoogleSignInTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		46243DD820864559006406AE /* Prueba-GoogleSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				465F7F8D20C97BF000482327 /* UneAppDatabase.db */,
 				46243DD920864559006406AE /* AppDelegate.swift */,
 				46411884208780D400030306 /* TableNoticiasController.swift */,
 				4641188A2087899E00030306 /* TableHorarioController.swift */,
@@ -163,7 +165,6 @@
 				46243DDD20864559006406AE /* Main.storyboard */,
 				464ED0D2209A3606001F7D9A /* QrViewController.swift */,
 				463D41FE20A1FFF300F9701F /* ViewTabBarController.swift */,
-				46CFEF7D20A5827800B6921C /* UneAppDatabase.db */,
 				46411882208780B200030306 /* Noticias.swift */,
 				464118882087867C00030306 /* Horario.swift */,
 				46243DE020864559006406AE /* Assets.xcassets */,
@@ -282,6 +283,7 @@
 				46243E0F20865722006406AE /* GoogleService-Info.plist in Resources */,
 				46243DE120864559006406AE /* Assets.xcassets in Resources */,
 				464ED0D4209A3843001F7D9A /* Main.storyboard in Resources */,
+				465F7F8E20C97BF000482327 /* UneAppDatabase.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

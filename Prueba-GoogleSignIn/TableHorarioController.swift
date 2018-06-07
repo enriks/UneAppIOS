@@ -67,6 +67,45 @@ class TableHorarioController: UITableViewController {
         return 1
     }
 
+    @IBAction func laAccion(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: self.view).x
+            print(self.view.frame.origin.x)
+            if translation > 0{
+                
+                print("izquierda")
+                
+                if self.view.frame.origin.x < 42.4{
+                    UIView.animate(withDuration: 0.2, animations: {self.view.frame.origin.x += translation/10
+                        self.view.layoutIfNeeded()})
+                }
+                
+            }else{
+                print("derecha")
+                if self.view.frame.origin.x > 15 || self.view.frame.origin.x <= 0{
+                    UIView.animate(withDuration: 0.2, animations: {print(self.view.frame.origin.x-(self.view.frame.origin.x - translation/5))
+                        self.view.frame.origin.x = self.view.frame.origin.x-(self.view.frame.origin.x - translation/10)
+                        self.view.layoutIfNeeded()})
+                }else if self.view.frame.origin.x > -20.0 && self.view.frame.origin.x < 0 {
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self.view.frame.origin.x = 0.0
+                        self.tabBarController?.selectedIndex = 2
+                        
+                    })
+                }
+            }
+        } else if (sender.state == .ended && self.view.frame.origin.x <= -20.5){
+            UIView.animate(withDuration: 0.2, animations: {
+                self.tabBarController?.selectedIndex = 1
+                
+            })
+        } else if sender.state == .ended && self.view.frame.origin.x > -10.0{
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.frame.origin.x = 0.0
+                
+            })
+        }
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return horarios.count

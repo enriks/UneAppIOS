@@ -24,10 +24,12 @@ class TableClasesController: UITableViewController {
         cargarClases()
     }
     func cargarClases(){
-        let basededatos = FMDatabase(path: DatabaseController().path)
+        print("estoy aca")
+        let basededatos = FMDatabase(path: AppDelegate.Usuario.path)
+        print(AppDelegate.Usuario.path)
         if basededatos.open(){
             do {
-                let resultado: FMResultSet? = try basededatos.executeQuery("select Eventos.nombreEvento nombre, progreso_asistencia.horasAlumno horasAlumno, progreso_asistencia.horasEvento horasEvento from Eventos, registros, progreso_asistencia where Eventos._id = registros.idEvento and progreso_asistencia.idEvento=registros.idEvento", values: nil)
+                let resultado: FMResultSet? = try basededatos.executeQuery("select Eventos._id id, Eventos.nombreEvento nombre, progreso_asistencia.horasAlumno horasAlumno, progreso_asistencia.horasEvento horasEvento from Eventos, registros, progreso_asistencia where Eventos._id = registros.idEvento and progreso_asistencia.idEvento=registros.idEvento", values: nil)
                 var progreso: Float
                 var horasalumno: Double
                 var horasevento: Double
@@ -36,7 +38,8 @@ class TableClasesController: UITableViewController {
                     horasevento = (resultado?.double(forColumn: "horasEvento"))!
                     progreso = (Float(horasalumno/horasevento))
                     print(progreso)
-                    clases += [Clases(nombre: (resultado?.string(forColumn: "nombre"))!, progres:progreso)!]
+                    clases += [Clases(nombre: (resultado?.string(forColumn: "nombre"))!, progres:progreso,id: (resultado?.int(forColumn: "id"))!)!]
+                    print("estoy aca")
                 }
             }catch{
                 print("error en la query")

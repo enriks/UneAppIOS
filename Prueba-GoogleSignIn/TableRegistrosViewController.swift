@@ -32,16 +32,16 @@ class TableRegistrosViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     func cargarRegistroClase(clase: Clases){
-        let baseDeDatos = FMDatabase(path: DatabaseController().path)
+        let baseDeDatos = FMDatabase(path: AppDelegate.Usuario.path)
         if baseDeDatos.open(){
             do {
-                let resultado: FMResultSet? = try baseDeDatos.executeQuery("select Eventos.nombreEvento nombre, registros.fecha fecha from Eventos, registros where Eventos.nombreEvento ='\(clase.nombreClase)'", values:nil)
+                let resultado: FMResultSet? = try baseDeDatos.executeQuery("select Eventos.nombreEvento nombre, registros.fecha fecha from Eventos, registros where Eventos._id ='\(clase.idClase)'", values:nil)
                 
                 while resultado?.next() == true{
                     registros += [Registros(clase: (resultado?.string(forColumn: "nombre"))!, fecha: (resultado?.string(forColumn: "fecha"))!)!]
                 }
             }catch{
-                print("error en la query")
+                print("error en la query2")
             }
         }else{
             print("mal no se abrio la base de datos")

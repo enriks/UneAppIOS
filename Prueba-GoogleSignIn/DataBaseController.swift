@@ -11,7 +11,8 @@ import SQLite3
 import FMDB
 
 class DatabaseController {
-    var path: String = "/Users/manuelcoto/Documents/GitHub/UneAppIOS/Prueba-GoogleSignIn/UneAppDatabase.db"
+    
+    var path: String = ""
     
     
     func prueba(){
@@ -34,7 +35,9 @@ class DatabaseController {
                 print("mal")
             }
     }
-    
+    func copyDatabaseIFNeeded(){
+        
+    }
     func ingresoRegistro(idEvento: Int, fecha: String, enviado: Int, estado: Int ){
         let baseDatos = FMDatabase(path: path)
         let insertQuery = "insert into registros(idEvento,fecha,enviado,estado) values (?,?,?,?)"
@@ -49,5 +52,11 @@ class DatabaseController {
         }
     }
     
-    
+    func create()->String{
+        let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory,in: .userDomainMask)
+        path=dirPaths[0].appendingPathComponent("UneApDatabase.db").path
+        print(path)
+        return path
+    }
 }

@@ -11,14 +11,16 @@ import UIKit
 class Clases{
     
     var nombreClase: String
+    var idClase : Int32
     var progreso: Float
     
-    init?(nombre: String, progres: Float){
+    init?(nombre: String, progres: Float, id: Int32){
         guard !nombre.isEmpty else {
             return nil
         }
         self.nombreClase = nombre
         self.progreso = progres
+        self.idClase = id
         print(self.progreso)
     }
 }

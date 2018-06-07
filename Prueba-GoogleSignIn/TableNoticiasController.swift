@@ -12,19 +12,9 @@ class TableViewController: UITableViewController {
 
     //MARK: Propiedades
     var noticias = [Noticias]()
+    var original : CGFloat = 0.0
     
-    @IBAction func esto(_ sender: UIPanGestureRecognizer) {
-        if sender.state == .began || sender.state == .changed{
-            let transicion = sender.translation(in: self.view).y
-            if transicion > 0 {
-                Tools().mostarQR(ventana: self)
-                print("swipe arriba∫")
-            }
-            else{
-                print("swipe arribas∫")
-            }
-        }
-    }
+    
     
     //Mark: Metodos Privados
     private func cargarNoticiasejemplo(){
@@ -32,27 +22,96 @@ class TableViewController: UITableViewController {
         let foto2 = UIImage(named: "67057-1")
         let foto3 = UIImage(named: "c26")
         
-        guard let noticia1 = Noticias(nombre: "Burger king foot letuce", foto: foto1, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. Cras nec orci blandit, mollis augue et, consequat ligula. Morbi in ornare ex. In blandit suscipit diam id vestibulum. Curabitur rutrum enim mi, ut euismod diam laoreet in. Curabitur bibendum vehicula finibus. Praesent egestas erat id pulvinar ultricies. Quisque eget purus ultricies, consectetur lectus a, porta ipsum. Mauris quis ante iaculis, mollis risus vitae, pellentesque nibh. Sed non lorem sagittis, vestibulum ex eget, faucibus enim. Vestibulum ultricies odio sed lectus faucibus, et tempor orci venenatis.") else {
+        guard let noticia1 = Noticias(nombre: "Burger king foot letuce", foto: foto1, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. ") else {
             fatalError("No se pudo instanciar la noticia1")
         }
-        guard let noticia2 = Noticias(nombre: "La noticia mas importante", foto: foto2, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. Cras nec orci blandit, mollis augue et, consequat ligula. Morbi in ornare ex. In blandit suscipit diam id vestibulum. Curabitur rutrum enim mi, ut euismod diam laoreet in. Curabitur bibendum vehicula finibus. Praesent egestas erat id pulvinar ultricies. Quisque eget purus ultricies, consectetur lectus a, porta ipsum. Mauris quis ante iaculis, mollis risus vitae, pellentesque nibh. Sed non lorem sagittis, vestibulum ex eget, faucibus enim. Vestibulum ultricies odio sed lectus faucibus, et tempor orci venenatis.") else {
+        guard let noticia2 = Noticias(nombre: "La noticia mas importante", foto: foto2, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. ") else {
             fatalError("No se pudo instanciar la noticia 2")
         }
         
-        guard let noticia3 = Noticias(nombre:"No hay mas noticias rip", foto: foto3, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. Cras nec orci blandit, mollis augue et, consequat ligula. Morbi in ornare ex. In blandit suscipit diam id vestibulum. Curabitur rutrum enim mi, ut euismod diam laoreet in. Curabitur bibendum vehicula finibus. Praesent egestas erat id pulvinar ultricies. Quisque eget purus ultricies, consectetur lectus a, porta ipsum. Mauris quis ante iaculis, mollis risus vitae, pellentesque nibh. Sed non lorem sagittis, vestibulum ex eget, faucibus enim. Vestibulum ultricies odio sed lectus faucibus, et tempor orci venenatis.") else {
-            fatalError("No se pudo instaciar la noticia 3")
+        guard let noticia3  = Noticias(nombre:"No hay mas noticias rip", foto: foto3, descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt ex et iaculis tincidunt. ")else {
+            fatalError("No se pudo instanciar la noticia 2")
         }
         noticias += [noticia1,noticia2,noticia3]
     }
     
     override func viewDidLoad() {
+        original = self.view.frame.origin.x
         super.viewDidLoad()
         cargarNoticiasejemplo()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //self.view.addGestureRecognizer(aaaa)
+    }
+   /* @IBAction func irDerecha(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed{
+            let translation = sender.translation(in: self.view).x
+            print(self.view.frame.origin.x)
+            if translation > 0{
+                
+                print("izquierda")
+                
+                if self.view.frame.origin.x < 42.4{
+                UIView.animate(withDuration: 0.2, animations: {self.view.frame.origin.x += translation/10
+                    self.view.layoutIfNeeded()})
+                }
+                
+            }else{
+                print("derecha")
+                if self.view.frame.origin.x > 15 || self.view.frame.origin.x <= 0{
+                    UIView.animate(withDuration: 0.2, animations: {print(self.view.frame.origin.x-(self.view.frame.origin.x - translation/5))
+                        self.view.frame.origin.x = self.view.frame.origin.x-(self.view.frame.origin.x - translation/10)
+                        self.view.layoutIfNeeded()})
+                }else if self.view.frame.origin.x > -20.0 && self.view.frame.origin.x < 0 {
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self.view.frame.origin.x = 0.0
+                        self.tabBarController?.selectedIndex = 1
+                        
+                    })
+                }
+            }
+        } else if (sender.state == .ended && self.view.frame.origin.x <= -20.5){
+            UIView.animate(withDuration: 0.2, animations: {
+                self.tabBarController?.selectedIndex = 1
+                
+            })
+        } else if sender.state == .ended && self.view.frame.origin.x > -10.0{
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.frame.origin.x = 0.0
+                
+            })
+        }
+    }*/
+    @objc func doSomething() {
+        
+    print("nada")
+    
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+       /*if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.right:
+                
+                print("swipe derecha")
+                
+                //change view controllers
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                let resultViewController = storyBoard.instantiateViewController(withIdentifier: "Horarios") as! TableHorarioController
+                
+                self.present(resultViewController, animated:true, completion:nil)
+                
+                
+                
+            default:
+                break
+            }
+        }*/
+        print("swipe derecha")
     }
 
     override func didReceiveMemoryWarning() {

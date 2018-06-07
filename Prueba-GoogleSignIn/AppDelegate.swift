@@ -19,12 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         static var usuario = ""
         static var estado = false
         static var clientId = ""
+        static var path = DatabaseController().create()
+        
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
-        
+        //DatabaseController().prueba()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         return true
